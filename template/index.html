@@ -1,11 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reverse String</title>    
+    <title>Reverse String</title> 
+    <!-- Incluyendo Tailwind CSS para un diseño rápido y responsivo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Usando la fuente Inter de Google Fonts para una mejor apariencia -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Aplicando la fuente Inter a todo el cuerpo del documento */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Estilo para la transición suave del botón */
+        #submitButton {
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+    </style>
 </head>
-<body>
-<script src="script.js"></script>
+<body class="bg-gray-100 dark:bg-gray-900 flex items-center justify-center min-h-screen">
+    
+    <div class="w-full max-w-md mx-auto p-6 md:p-8">
+        <div class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-8">
+            
+            <!-- Encabezado de la tarjeta -->
+            <div class="text-center mb-8">
+                <h1 class="text-3xl font-bold text-gray-800 dark:text-white">Reverse String</h1>
+                <p class="text-gray-500 dark:text-gray-400 mt-2">Ingresa un texto para verlo al revés en tiempo real.</p>
+            </div>
+
+            <!-- Formulario y área de entrada -->
+            <div class="space-y-6">
+                <div>
+                    <label for="text-input" class="text-sm font-medium text-gray-700 dark:text-gray-300">Tu Texto</label>
+                    <input type="text" id="text-input" placeholder="Escribe algo aquí..." class="mt-2 w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg text-gray-800 dark:text-gray-200 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                </div>
+                
+                <!-- Área para mostrar el resultado -->
+                <div>
+                    <label for="result" class="text-sm font-medium text-gray-700 dark:text-gray-300">Resultado Invertido</label>
+                    <p id="result" class="mt-2 w-full px-4 py-3 bg-gray-100 dark:bg-gray-700 rounded-lg min-h-[48px] text-gray-500 dark:text-gray-400 text-lg break-words flex items-center">...</p>
+                </div>
+                
+                <!-- Botón que aparece condicionalmente -->
+                <div class="text-center pt-2 h-12">
+                     <button id="submitButton" class="w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-gray-800 opacity-0 transform scale-95" style="display: none;">
+                        Botón Condicional
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        <footer class="text-center mt-6">
+            <p class="text-sm text-gray-500 dark:text-gray-400">Desarrollado con Gemini</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
